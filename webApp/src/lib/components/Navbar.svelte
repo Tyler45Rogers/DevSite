@@ -2,6 +2,7 @@
   import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
   import House from '@lucide/svelte/icons/house';
   import Gamepad from '@lucide/svelte/icons/gamepad-directional';
+  import Guitar from '@lucide/svelte/icons/guitar'
   let open = $state(false);
 </script>
 
@@ -14,10 +15,17 @@
     </a>
 
     <!-- Center -->
+    <div>
     <a class="btn btn-ghost p-2" href="/games">
         <Gamepad size={28} />
         Games
     </a>
+
+    <a class="btn btn-ghost p-2" href="/tuner">
+        <Guitar size={28} />
+        Tuner
+    </a>
+    </div>
 
     <!-- Right -->
     <ThemeSwitcher />
@@ -51,6 +59,10 @@
       <a class="btn btn-ghost p-2" href="/games">
         <Gamepad size={28} />
         Games
+      </a>
+      <a class="btn btn-ghost p-2" href="/tuner">
+        <Guitar size={28} />
+        Tuner
       </a>
     </div>
   {/if}
